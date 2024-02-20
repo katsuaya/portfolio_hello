@@ -1,0 +1,777 @@
+@charset "utf-8";
+
+*{
+  font-family: 'Inika';
+  margin: 0;
+  padding: 0;
+}
+body{
+  width:100%;
+  -webkit-font-smoothing: antialiased;
+}
+.typing{
+  font: 900 4rem/1 "JetBrains Mono";
+  width: 8ch;
+  overflow:hidden;
+  animation:typing 1.5s steps(10) infinite alternate;
+}
+.typing02{
+  margin: 0 auto;
+  font: 900 4rem/1 "JetBrains Mono";
+  width: 8ch;
+  overflow:hidden;
+  animation:typing 2.0s steps(14) infinite alternate;
+}
+@keyframes typing{
+  from{
+    width: 0ch;
+  }}
+  @keyframes typing02{
+    from{
+      width: 0ch;
+    }}
+  
+/*header*/
+.wrapper{
+  display:flex;
+  justify-content:space-between;
+  max-width:100%;
+}
+.wrapper h1{
+  width:40%;
+  margin-top:32px;
+}
+
+.gnavi{
+  display: flex;
+  margin:32px 0 50px 0;
+  list-style: none;
+  padding:32px 0;
+}
+
+.gnavi li a{
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+.gnavi li a{
+position: relative;
+}
+.gnavi li.current a,
+.gnavi li a:hover{
+color:#E1D2BB;
+}
+.gnavi li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background:#E1D2BB;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+}
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+  transform: scale(1, 1);
+}
+nav{
+  margin:42px 32px 0;
+}
+.wrapper li{
+  list-style-image: url(image.png);
+  padding:10px 20px;
+  list-style: none;
+}
+.wrapper a{
+  text-decoration:none;
+  color:#494955;
+}
+.wrapper span{
+  background-color:#494955;
+  color:#fff;
+  padding:10px 20px;
+}
+
+/* main */
+.hero{
+  background-color:#76aada2b;
+}
+.main-wrapper{
+  max-width:100%;  
+  position:relative;
+  z-index:990;
+}
+.main-wrapper img{
+  border-radius:43px 0 0 43px;
+  margin:0 0 0 400px;
+  background:cover;
+  max-width:100%;
+  background-size:cover;
+  height:100vh;
+  background-repeat:no-repeat;
+}
+.top_img{
+  display: none;
+}
+.slick-initialized{
+  display: block;
+} 
+.slick-arrow:before{
+	content:""!important;
+}
+
+/*about*/
+#about{
+  margin:200px 500px 0px 0px;
+}
+.about-container{
+  color:#494955;
+  max-width:100%;
+  background-color:#F9F2E8;
+  border:5px solid #E1D2BB;
+  border-left:none;
+  border-radius: 0 43px 43px 0;
+  display:block;
+}
+.introduce-title {
+  padding:50px 100px;
+  color:#494955;
+}
+.introduce-title h2{
+  font-size:40px;
+  width:7ch;
+}
+.introduce-title  p{
+  font-size:16px;
+}
+
+.introduce-content p{
+  width:50%;
+  margin:10px 100px;
+  background-color:#F9F2E8;
+  font-size:18px;
+  padding-bottom:50px;
+} 
+span{
+  background-color:#E1D2BB;
+  padding:10px 10px;
+}
+
+.myphoto{
+  position:relative;
+}
+.myphoto img{
+  position:absolute;
+  top:90px;
+  left:600px;
+  border:10px solid #fff;
+}
+/* skills */
+#skills{
+  margin:0 auto;
+  color:#494955;
+  width:100%;
+  background-size:cover;
+  background-color:rgba(255,255,255,0.8);
+  background-image:url(../beach.jpg);
+  background-blend-mode:lighten;
+  background-position: bottom;
+  background-repeat: no-repeat; 
+}
+.skills-title{
+  text-align:center;
+}
+.skills-title h2{
+  font-size:40px;
+  margin-top:100px;
+  padding-top:80px;
+  text-align:center;
+}
+.skills-title p{
+  font-size:20px;
+  text-align:center;
+  margin-bottom:50px;
+}
+.skills-wrapper{
+  max-width:100%;
+  width:50%;
+  margin:100px 300px;
+}
+.skills-content{
+  margin:0 auto;
+  display:flex;
+  justify-content: space-between;
+  width:50%;
+  background-color:#fff;
+}
+.skills-list ul{
+  list-style-position: inside;
+  padding:64px;
+  margin:0 auto;
+  background-color: #fff;
+}
+.skills-content-img img{
+  margin:0 auto;
+}
+.skills-list li{
+  list-style: none;
+  text-align:center;
+  font-size:20px;
+}
+.skills-content01{
+  width:50%;
+  margin:0 auto;
+  margin-top:48px;
+  background-color:#e1d2bbc6;
+  padding:32px;
+}
+.skills-content02{
+  width:50%;
+  margin:0 auto;
+  margin-top:48px;
+  background-color:#e1d2bbc6;
+  padding:32px;
+  padding-bottom:64px;
+}
+
+
+/* works */
+#works {
+  width:100%;
+  color:#494955;
+  position:relative;
+ 
+}
+.myworks-title{
+  margin:100px 200px;
+  color:#494955;
+  position:relative;
+}
+.myworks-title h2{
+  font-size:40px;
+  text-align:center;
+}
+.myworks-title p{
+  font-size:20px;
+  margin-bottom:200px;
+  z-index:2;
+  text-align:center;
+}
+.myworks-photo{
+  margin:100px 300px 0px;
+  text-align:right;
+  z-index:99;
+}
+.myworks-photo img{
+    position:relative;
+    z-index:77;
+}
+.myworks-photo p{
+  letter-spacing: 3px;
+  position:relative;
+  z-index:77;
+}
+.background{
+  position:absolute;
+  top:400px;
+  z-index:10;
+  width:100%;
+  height:300px;
+  background-color:#e1d2bb8d;
+}
+/* gallery */
+#gallery{
+  width:100%;
+}
+#gallery h2{
+  font-size:40px;
+  color:#494955;
+  text-align:center;
+  margin-top:200px;
+}
+#gallery p{
+  font-size:18px;
+  color:#494955;
+  text-align:center;
+  margin-bottom:100px;
+}
+/* slider */
+.slider {
+  position:relative;
+	z-index: 1;
+  height:300px;
+  margin:0 auto;
+  width:50%;
+}
+.slider {
+  display: none;
+}
+#slider.slick-initialized{
+  display: block;
+}
+
+
+/* 背景画像 */
+
+.slider-item01 {
+    background:url(../64537.jpg);
+}
+
+.slider-item02 {
+    background:url(../64534.jpg);
+}
+
+.slider-item03 {
+    background:url(../64530.jpg);
+}
+.slider-item04 {
+  background:url(../64521.jpg);
+}
+.slider-item05 {
+  background:url(../64529.jpg);
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:500px;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;
+    display: block;
+    margin:0 auto;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*矢印の設定*/
+
+.slick-prev, 
+.slick-next {
+    position: absolute;
+	  z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #494955;/*矢印の色*/
+    border-right: 2px solid #494955;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+	position: relative;
+	z-index: 3;
+  text-align:center;
+	margin:860px 0 0 0;/*ドットの位置*/
+}
+
+.slick-dots li {
+    display:inline-block;
+	  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#fff;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#494955;/*ドットボタンの現在地表示の色*/
+}
+.slide-wrapper{
+    position: relative;
+}
+
+/* contact ----------------------*/
+
+.contact-title{
+  text-align: center;
+  color:#494955;
+  margin-top:150px;
+}
+.contact-title h2{
+  font-size: 40px;
+}
+.contact-title p{
+  font-size:18px;
+  padding-bottom:50px;
+}
+.form-container{
+  width:50%;
+  color:#494955;
+  margin:0 auto;
+}
+.contact-container p{
+  display:block;
+  text-align:left;
+  margin: 0 0 10px;
+}
+input,textarea{
+  width:100%;
+  padding:10px 20px;
+  border-radius:10px;
+  box-shadow:none;
+  border:1px solid #494955;
+  margin-bottom:16px;
+}
+.btn{
+  width:30%;
+  display:block;
+  background-color:#494955;
+  padding:10px 20px;
+  color:#fff;
+  text-decoration:none;
+  display: inline-block;
+  border-radius : 5%;     
+  font-size: 18pt; 
+  text-align: center; 
+  cursor: pointer;
+  line-height: 1em;
+  border-radius:10px;
+}
+.btn:hover {
+  border:1px solid #494955;   
+  color: #494955;  
+  background: #ffffff;
+  border-radius:10px;
+}
+
+/* footer */
+footer{
+  background-color:#E1D2BB;
+  line-height:100px;
+  color:#494955;
+  text-align:center;
+}
+
+.top_button{
+  position:fixed;
+  right:5%;
+  bottom:10%;
+  padding: 10px 40px;
+  border-radius:30px;
+  border-color:#494955;
+  background-color:#494955;
+  color:#fff;
+  font-size:30px;
+  z-index:77;
+}
+@media screen and (max-width: 768px) {
+ 
+  body {
+    font-size: 14px; 
+  }
+
+  /* Header */
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    padding: 20px;
+  }
+  .wrapper h1 {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 1.2;
+  }
+  nav {
+    display: none;
+  }
+
+  /* Main */
+ 
+  .main-wrapper img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    margin:0;
+    border-radius:0;
+  }
+
+  /* About */
+  #about {
+    margin: 20px;
+  }
+  .about-container {
+    border-radius: 10px; 
+    border:5px solid #E1D2BB;
+  }
+  .introduce-title{
+  padding:20px;
+}
+  .introduce-title h2{
+    margin: 0 auto;
+    max-width:100%;
+    text-align:center;
+    font-size:24px;
+  }
+  .introduce-title p {
+    text-align: center;
+  }
+  .introduce-content h2,
+  .introduce-content p{
+    padding:20px;
+    margin:0 auto;
+  }
+  .introduce-content p {
+    font-size:14px;
+    width: 80%;
+    text-align:center;
+  }
+  .myphoto{
+    position:static;
+    text-align:center;
+  }
+  .myphoto img {
+    position:static;
+    width: 50%;
+    height: auto;
+    margin:0 auto;
+  }
+
+  /* Skills*/
+  #skills {
+    height: auto;
+  }
+  .skills-title h2{
+    font-size:24px;
+  }
+  .skills-title p{
+    font-size:14px;
+  }
+  .skills-wrapper {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .skills-content {
+    flex-direction: column;
+  }
+  .skills-list ul {
+    padding: 20px;
+    text-align: center;
+  }
+  .skills-list li{
+    list-style: none;
+  }
+  .skills-content-img img {
+    width: 100%;
+    height:200px;
+    margin: 0 auto;
+  }
+  .skills-content01, .skills-content02 {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  /* Works */
+  .myworks-title{
+    max-width:100%;
+    margin:0 auto;
+  }
+  .myworks-title h2{
+    text-align:center;
+    margin-top:100px;
+    font-size:24px;
+  }
+  .myworks-title p{
+    font-size:14px;
+    text-align:center;
+  }
+  .myworks-photo {
+    text-align: center;
+    margin: 50px auto;
+  }
+  .myworks-photo img {
+    height: auto;
+    margin: 0 auto;
+  }
+  .background{
+    height:200px;
+  }
+  /* Gallery */
+  #gallery h2{
+    font-size:24px;
+  }
+  #gallery p {
+    text-align: center;
+    font-size:14px;
+  }
+  .slider-item {
+    width: 100%;
+    height:200px;
+  }
+
+  /* Contact */
+  #contact{
+    margin:0 auto;
+  }
+  .contact-title h2{
+   font-size:24px;
+   text-align: center;
+  } 
+  .contact-title p {
+    text-align: center;
+    font-size:14px;
+  }
+  .contact-container{
+    width:100%;
+    color:#494955;
+    text-align:center;
+  }
+  form{
+    margin:0 auto;
+  }
+  .contact-title p{
+    font-size:12px;
+    padding-bottom:50px;
+  }
+  .btn{
+  font-size:14px;
+  }
+  .top_button{
+  padding: 5px 20px;
+  font-size:18px;
+  }
+  input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding:10px 0px;
+  }
+  .btn {
+    width: 100%;
+  }
+  /* Footer*/
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   
+    body {
+      font-size: 14px; 
+    }
+  
+    /* Header */
+    .wrapper {
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.5;
+      padding: 20px;
+    }
+    .wrapper h1 {
+      width: 100%;
+      margin: 20px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight:normal;
+    }
+    nav {
+      display: none; 
+    }
+  
+    /* Main */
+  
+    .main-wrapper img {
+      border-radius:0;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    /* About */
+    #about {
+      margin: 20px;
+    }
+    .about-container {
+      border-radius: 10px; 
+      border:5px solid #E1D2BB;
+    }
+    .introduce-title{
+    padding:20px;
+  }
+    .introduce-title h2{
+      max-width:100%;
+      margin:0 auto;
+      font-size:24px;
+    }
+    .introduce-title p {
+      text-align: center;
+    }
+    .introduce-content h2,
+    .introduce-content p{
+      padding:20px;
+    }
+    .introduce-content p {
+      width: 80%;
+      text-align:center;
+    }
+    .myphoto{
+      position:static;
+      text-align:center;
+    }
+    .myphoto img {
+      position:static;
+      width: 50%;
+      height: 250px;
+      margin:0 auto;
+    }
+  
+    /* Skills */
+    #skills{
+      height:auto;
+    }
+    .skills-content-img img {
+      width: 100%;
+      height:300px;
+      margin: 0 auto;
+    }
+  
+    /* Works */
+    .myworks-photo{
+      text-align:center;
+    }
+    .myworks-photo img {
+      margin: 0 auto;
+    }
+    
+    /* Gallery  */
+    .slider-item {
+      width: 100%;
+      height:300px;
+    }
+  
+    /* Contact */
+    .contact-container{
+      width:100%;
+    }
+    button{
+    padding: 5px 20px;
+    font-size:18px;
+    }
+    .btn {
+      width: 30%;
+      font-size:14px;
+    }
+  }
+
